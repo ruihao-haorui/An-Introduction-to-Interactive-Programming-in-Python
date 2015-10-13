@@ -71,11 +71,21 @@ def remove_last_odd2(numbers):
     
     if has_odd:
         numbers.pop(last_odd_index)
+
+def remove_last_odd3(numbers):
+    has_odd = False
+    last_odd = 0
+    
+    for index in range(len(numbers)-1, -1 ,-1):        
+        if numbers[index] % 2 == 1:
+            numbers.pop(index)
+            return
+
         
 def run():
     numbers = [1, 7, 2, 34, 8, 7, 2, 5, 14, 22, 93, 48, 76, 15, 7]
     print numbers
-    remove_last_odd2(numbers)
+    remove_last_odd3(numbers)
     
     print numbers
     
